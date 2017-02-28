@@ -1,0 +1,14 @@
+<template>
+    <div style="flex-direction: column;">
+        <text>movie.we</text>
+    </div>
+</template>
+
+<script>
+    require('weex-components');
+    var modal = require('@weex-module/modal');
+    var dom = require("@weex-module/dom");
+    var animation = require('@weex-module/animation');
+    var stream = require('@weex-module/stream');
+    var apis = require('../common/api');
+</script>

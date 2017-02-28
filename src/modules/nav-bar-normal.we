@@ -1,0 +1,67 @@
+<template >
+  <div class="">
+    <div class="nav-bar-content">
+      <div class="button-back" style="flex:1">
+          <image
+            style="height:99;width:99"
+            if={{showitem}}
+            onclick="onBackClick"
+            src="https://github.com/dodola/WeexOne/raw/master/imgs/return_image.png"
+          ></image>
+      </div>
+      <div class="nav-title" style="flex:1">
+        <image
+          style="height: 30;width: 75"
+          src="http://image.wufazhuce.com/m.wufazhuce.com-logo-gray-pure.png"
+        ></image>
+        <text class="nav-title-text">|{{title}}</text>
+      </div>
+      <div style="flex:1;"></div>
+    </div>
+    <div class="separate-item-text"></div>
+  </div>
+</template>
+<style>
+  .nav-bar-content {
+    height: 99px;
+    flex-direction: row;
+    margin-bottom:10px;
+  }
+  .nav-title {
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+  }
+  .nav-title-text {
+    padding-left: 10px;
+    color:#29a7e2;
+  }
+  .separate-item-text {
+    height: 1px;
+    background-color: #d4d4d4;
+}
+</style>
+<script>
+  var navigator = require('@weex-module/navigator');
+  module.exports = {
+    data: {
+      title: '阅读',
+      showitem: false,
+    },
+    created: function () {
+
+    },
+    methods: {
+        onBackClick: function () {
+           var vm = this;
+           var params = {
+             'animated' : 'true',
+           }
+           navigator.pop(params,function () {
+
+           });
+        }
+    }
+  }
+
+</script>
